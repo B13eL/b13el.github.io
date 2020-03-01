@@ -3,6 +3,7 @@
   transform: translateY(30px) !important;
   transition: opacity 1.8s, transform 1.2s;
 }
+
 .animation-show-top{
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -16,6 +17,14 @@
 .animation-show-left{
   opacity: 1 !important;
   transform: translateX(0) !important;
+}
+
+*[animation="opacity"]{
+  opacity: 0;
+  transition: opacity 1.8s;
+}
+.animation-opacity {
+  opacity: 1 !important;
 }
 
 *[animation="scale"]{

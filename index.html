@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="css/libs/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -41,9 +42,13 @@
       </a>
       <!-- end logo -->
       <div class="menu__box">
-        <a class="menu__item" href="#">Продукция</a>
-        <a class="menu__item" href="#">приглашаем к сотрудничеству</a>
-        <a class="menu__item" href="#">Контакты</a>
+        <a class="menu__item" href="#product">Продукция</a>
+        <a class="menu__item" href="#cooperation">Приглашаем к сотрудничеству</a>
+        <a class="menu__item" href="#contact">Контакты</a>
+      </div>
+      <div class="switch-btn">
+        <img class="switch-btn__icon switch-btn__icon-open switch-btn__icon--show" src="img/menu.svg" alt="mob menu" width="30">
+        <img class="switch-btn__icon switch-btn__icon-close" src="img/exit.svg" alt="exit menu" width="22">
       </div>
     </div>
     <!-- end content -->
@@ -51,23 +56,26 @@
   <!-- end menu -->
   <div class="s1">
     <div class="content-handler">
-      <img class="s1__img" src="img/s1.png" alt="VolkFix продукция">
-      <h1 class="s1__title">VolkFix – ведущий поставщик строительной химии на рынке Украины.</h1>
-      <p class="s1__text">Опираясь на многолетний опыт работы, высокий уровень профессионализма и постоянное стремление к развитию, мы предоставляем по-настоящему выгодные решения для наших бизнес-партнеров в области дистрибьюции, он-лайн и офф-лайн ритейла и строительства.</p>
-      <p class="s1__text">Каждый год наша компания предлагает рынку Украины все новые и новые товары, ведь они крайне интересны для наших дистрибьюторов и пользуются огромной популярностью у конечного потребителя.</p>
-      <p class="s1__text">Нам удается создать продукты, обладающие оптимальными качественными характеристиками и 100% "проходной ценой". "ЛУЧШЕЕ ЦЕНОВОЕ ПРЕДЛОЖЕНИЕ" на рынке уже рядом с вами! Таким образом, VolkFix сочетает в себе оптимальное качество для рынка Украины по лучшей цене.</p>
+      <img class="s1__img" src="img/s1.png" alt="VolkFix продукция" animation="show-up">
+      <h1 class="s1__title" animation="show-up">VolkFix – ведущий поставщик строительной химии на рынке Украины.</h1>
+      <p class="s1__text" animation="show-up">Опираясь на многолетний опыт работы, высокий уровень профессионализма и постоянное стремление к развитию, мы предоставляем по-настоящему выгодные решения для наших бизнес-партнеров в области дистрибьюции, он-лайн и офф-лайн ритейла и строительства.</p>
+      <p class="s1__text" animation="show-up">Каждый год наша компания предлагает рынку Украины все новые и новые товары, ведь они крайне интересны для наших дистрибьюторов и пользуются огромной популярностью у конечного потребителя.</p>
+      <p class="s1__text" animation="show-up">Нам удается создать продукты, обладающие оптимальными качественными характеристиками и 100% "проходной ценой". "ЛУЧШЕЕ ЦЕНОВОЕ ПРЕДЛОЖЕНИЕ" на рынке уже рядом с вами! Таким образом, VolkFix сочетает в себе оптимальное качество для рынка Украины по лучшей цене.</p>
     </div>
   </div>
   <!-- end s1 -->
-  <div class="s2">
+  <div class="s2" id="product">
     <div class="content-handler content-handler--flex">
-      <img class="s2__img" src="img/s2.png" alt="Пена монтажная всесезонная с аппликатором">
+      <div class="half-box-img" animation="show-left" animation-delay="low">
+        <img class="s2__img" src="img/s2.png" alt="Пена монтажная всесезонная с аппликатором" >
+      </div>
       <div class="box-info">
-        <p class="s2__title">Продукция</p>
-        <h2 class="main-title">Пена монтажная всесезонная <br><span class="main-title--sub">с аппликатором</span></h2>
-        <p class="s1__text">Применяется для заполнения пустот, зазоров и щелей между различными строительными конструкциями и материалами, внутри и снаружи помещения. Применяется при установке дверных и оконных коробок, прокладке и изоляции труб, электропроводки, распределительных сетей и других работах.</p>
-
-        <div class="box-detail">
+        <div animation="show-up">
+          <p class="s2__title">Продукция</p>
+          <h2 class="main-title">Пена монтажная всесезонная <br><span class="main-title--sub">с аппликатором</span></h2>
+          <p class="s1__text">Применяется для заполнения пустот, зазоров и щелей между различными строительными конструкциями и материалами, внутри и снаружи помещения. Применяется при установке дверных и оконных коробок, прокладке и изоляции труб, электропроводки, распределительных сетей и других работах.</p>
+        </div>
+        <div class="box-detail" animation="opacity" animation-delay="low">
           <p class="box-detail-item">Объем: 300, 500, 750, 850 мл</p>
           <p class="box-detail-item">Выход пены до: 20, 25, 30, 50, 65 л</p>
           <p class="box-detail-item">С аппликатором</p>
@@ -83,10 +91,12 @@
   <div class="s3">
     <div class="content-handler content-handler--flex">
       <div class="box-info text-right">
-        <h2 class="main-title">Пена монтажная всесезонная <br><span class="main-title--sub">для профессионального использования</span></h2>
-        <p class="s1__text">Пена для профессионального использования с “пистолетом”. Герметизирует, уплотняет и надежно фиксирует конструкции, обеспечивая высокую тепло- и звукоизоляцию. Обладает отличной адгезией (сцеплением) к большинству строительных материалов</p>
+        <div animation="show-up">
+          <h2 class="main-title">Пена монтажная всесезонная <br><span class="main-title--sub">для профессионального использования</span></h2>
+          <p class="s1__text">Пена для профессионального использования с “пистолетом”. Герметизирует, уплотняет и надежно фиксирует конструкции, обеспечивая высокую тепло- и звукоизоляцию. Обладает отличной адгезией (сцеплением) к большинству строительных материалов</p>
+        </div>
 
-        <div class="box-detail">
+        <div class="box-detail" animation="opacity" animation-delay="low">
           <p class="box-detail-item">Объем: 850 мл</p>
           <p class="box-detail-item">Выход пены до:  65 л </p>
           <p class="box-detail-item">Температура применения: -10 +350С</p>
@@ -95,7 +105,7 @@
         </div>
         <!-- end  -->
       </div>
-      <div class="half-box-img">
+      <div class="half-box-img" animation="show-up" animation-delay="low">
         <img class="s3__img" src="img/s3.png" alt="Пена монтажная всесезонная для профессионального использования">
       </div>
     </div>
@@ -103,14 +113,16 @@
   <!-- end s3 -->
   <div class="s4">
     <div class="content-handler content-handler--flex">
-      <div class="half-box-img">
+      <div class="half-box-img" animation="show-left" animation-delay="low">
         <img class="s4__img" src="img/s4.png" alt="Клей-пена">
       </div>
       <div class="box-info">
-        <h2 class="main-title">Клей-пена</h2>
-        <p class="s1__text">Клей-пена для крепления теплоизоляции из пенополистирола, пенополиуретана и подобных материалов. Удобна в работе, транспортировке и хранении. Выпускается как в баллонах с аппликатором так и под “пистолет”.</p>
+        <div animation="show-up">
+          <h2 class="main-title">Клей-пена</h2>
+          <p class="s1__text">Клей-пена для крепления теплоизоляции из пенополистирола, пенополиуретана и подобных материалов. Удобна в работе, транспортировке и хранении. Выпускается как в баллонах с аппликатором так и под “пистолет”.</p>
+        </div>
 
-        <div class="box-detail">
+        <div class="box-detail" animation="opacity" animation-delay="low">
           <p class="box-detail-item">Объем: 900 мл</p>
           <p class="box-detail-item">Выход пены до: 12-14 погонных метров <span class="text-12">(при толщине стяжка 2см)</span></p>
           <p class="box-detail-item">Температура применения: +5 +300С</p>
@@ -124,7 +136,7 @@
   <!-- end s4 -->
   <div class="s5">
     <div class="content-handler content-handler--flex">
-      <div class="box-info-third text-right">
+      <div class="box-info-third text-right" animation="show-left">
         <h2 class="main-title s5__title">Герметик силиконовый<br> универсальный</h2>
         <p class="s5__text">Для уплотнения и герметизации соединений, стыков и швов, а также для защиты от УФ лучей.</p>
 
@@ -139,11 +151,11 @@
       </div>
       <!-- end box-info -->
 
-      <div class="middle-box-img">
+      <div class="middle-box-img" animation="show-up" animation-delay="low">
         <img class="s5__img" src="img/s5.png" alt="Клей-пена">
       </div>
 
-      <div class="box-info-third">
+      <div class="box-info-third" animation="opacity" animation-delay="medium">
         <h2 class="main-title s5__title">Герметик силиконовый<br> санитарный</h2>
         <p class="s5__text">Для уплотнения и герметизации соединений, стыков и швов, в помещениях с повышенной влажностью.</p>
 
@@ -162,15 +174,17 @@
   <!-- end s5 -->
   <div class="s6">
     <div class="content-handler content-handler--flex">
-      <div class="half-box-img half-box-img--s6">
+      <div class="half-box-img half-box-img--s6" animation="show-left" animation-delay="low">
         <img class="s6__img" src="img/s6.png" alt="Клей-пена">
       </div>
       <div class="box-info">
-        <h2 class="main-title">Клей монтажный <br><span class="main-title--sub">на каучуковой основе, «жидкие гвозди»</span></h2>
-        <p class="s1__text">Для внутренних и наружных работ.</p>
-        <p class="s1__text">Применяется для склеивания гипсокартона, древесины, стекла, пластиков, алюминия, керамики, плитки из полимеров.</p>
+        <div animation="opacity">
+          <h2 class="main-title">Клей монтажный <br><span class="main-title--sub">на каучуковой основе, «жидкие гвозди»</span></h2>
+          <p class="s1__text">Для внутренних и наружных работ.</p>
+          <p class="s1__text">Применяется для склеивания гипсокартона, древесины, стекла, пластиков, алюминия, керамики, плитки из полимеров.</p>
+        </div>
 
-        <div class="box-detail box-detail--s6">
+        <div class="box-detail box-detail--s6" animation="show-up" animation-delay="low">
           <p class="box-detail-item">Объем: 300 мл</p>
           <p class="box-detail-item">Цвет:  бежевый</p>
           <p class="box-detail-item">Температура применения: -10 +400С</p>
@@ -184,12 +198,12 @@
   <!-- end s6 -->
   <div class="s7">
     <div class="content-handler content-handler--flex">
-      <div class="box-info text-right">
+      <div class="box-info text-right" animation="opacity">
         <h2 class="main-title">Клей монтажный <br><span class="main-title--sub">на каучуковой основе, «жидкие гвозди»</span></h2>
         <p class="s1__text">Для внутренних и наружных работ.</p>
         <p class="s1__text">Применяется для склеивания гипсокартона,древесины, стекла, пластиков, алюминия, керамики, плитки из полимеров, пенопласт, полистирол и декоративные багеты.</p>
 
-        <div class="box-detail box-detail--s6">
+        <div class="box-detail box-detail--s6" animation="show-up" animation-delay="low">
           <p class="box-detail-item">Объем: 300 мл</p>
           <p class="box-detail-item">Цвет: белый</p>
           <p class="box-detail-item">Температура применения: +5 +400С</p>
@@ -199,7 +213,7 @@
         <!-- end box-detail -->
       </div>
       <!-- end box-info -->
-      <div class="half-box-img">
+      <div class="half-box-img" animation="scale" animation-delay="low">
         <img class="s4__img" src="img/s7.png" alt="Клей-пена">
       </div>
     </div>
@@ -207,14 +221,16 @@
   <!-- end s7 -->
   <div class="s8">
     <div class="content-handler content-handler--flex">
-      <div class="half-box-img half-box-img--s6">
+      <div class="half-box-img half-box-img--s6" animation="scale" animation-delay="low">
         <img class="s6__img" src="img/s8.png" alt="Клей-пена">
       </div>
       <div class="box-info">
-        <h2 class="main-title">Герметик силиконовый<br><span class="main-title--sub">универсальный (в блистере)</span></h2>
-        <p class="s1__text">Для уплотнения и герметизации соединений, стыков и швов, а также для защиты от УФ лучей.</p>
+        <div animation="show-up">
+          <h2 class="main-title">Герметик силиконовый<br><span class="main-title--sub">универсальный (в блистере)</span></h2>
+          <p class="s1__text">Для уплотнения и герметизации соединений, стыков и швов, а также для защиты от УФ лучей.</p>
+        </div>
 
-        <div class="box-detail box-detail--s6">
+        <div class="box-detail box-detail--s6" animation="opacity" animation-delay="low">
           <p class="box-detail-item">Объем: 50 мл</p>
           <p class="box-detail-item">Цвет:  белый, прозрачный</p>
           <p class="box-detail-item">Температура применения: +5 +400С </p>
@@ -227,20 +243,30 @@
     </div>
   </div>
   <!-- end s8 -->
-  <div class="s9">
+  <div class="s9" id="cooperation">
     <div class="content-handler">
-      <h3 class="s9__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ</h3>
-      <p class="s1__text">Компания стремится к постоянному расширению сбытовой структуры посредством привлечения новых и регулярной поддержки существующих клиентов. Если Вы ищете надежного поставщика, цените профессионализм и качество во всем, присоединяйтесь к числу наших Партнеров!</p>
-      <p class="s1__text"> Вы можете связаться с нами по указанным контактам. Всего один звонок даст вам ответы на все интересующие вопросы.</p>
-      <h3 class="s9__title">НАШИ ЦЕННОСТИ</h3>
-      <p class="s1__text">Динамичность и самосовершенствование<br>Мы всегда готовы меняться для того, чтобы получить наилучший результат и предоставить для своих клиентов выгодные решения.</p>
-      <p class="s1__text">Ориентированность на внешний мир<br>Данный принцип выражается в изучении потребностей и проблем наших клиентов, в исследовании новых возможностей для их решения и воплощении интересных идей.</p>
-      <p class="s1__text">Стремление учиться и обучать<br>Каждый день мы учимся чему-то новому для того, чтобы помочь себе и своим партнерам добиваться большего и делать жизнь других людей лучше. </p>
-      <p class="s1__text">Энтузиазм и преданность делу<br>Работать упорнее, энергичнее, самоотверженнее – наш способ достижения успеха и реализации миссии компании.</p>
-      <p class="s1__text">Командный дух<br>Успех любого предприятия - это люди, которые каждый день вкладывают свои средства, силы, время в реализацию миссии компании. Именно поэтому для нас важно строить настоящую команду профессионалов, объединенных общей идеей, желающих развиваться и получающих удовольствие не только от победы, но и от самого процесса игры. </p>
-      <p class="s1__text">Движение вперед<br>«Сегодня – это результат наших вчерашних действий». Мы знаем, что завтра будем впереди, потому что уже сегодня делаем все возможное, чтобы стать лучше, результативнее, быстрее и эффективнее!</p>
+      <h3 class="s9__title" animation="show-up">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ</h3>
+      <p class="s1__text" animation="show-up">Компания стремится к постоянному расширению сбытовой структуры посредством привлечения новых и регулярной поддержки существующих клиентов. Если Вы ищете надежного поставщика, цените профессионализм и качество во всем, присоединяйтесь к числу наших Партнеров!</p>
+      <p class="s1__text" animation="show-up"> Вы можете связаться с нами по указанным контактам. Всего один звонок даст вам ответы на все интересующие вопросы.</p>
+      <h3 class="s9__title" animation="show-up">НАШИ ЦЕННОСТИ</h3>
+      <p class="s1__text" animation="show-up">Динамичность и самосовершенствование<br>Мы всегда готовы меняться для того, чтобы получить наилучший результат и предоставить для своих клиентов выгодные решения.</p>
+      <p class="s1__text" animation="show-up">Ориентированность на внешний мир<br>Данный принцип выражается в изучении потребностей и проблем наших клиентов, в исследовании новых возможностей для их решения и воплощении интересных идей.</p>
+      <p class="s1__text" animation="show-up">Стремление учиться и обучать<br>Каждый день мы учимся чему-то новому для того, чтобы помочь себе и своим партнерам добиваться большего и делать жизнь других людей лучше. </p>
+      <p class="s1__text" animation="show-up">Энтузиазм и преданность делу<br>Работать упорнее, энергичнее, самоотверженнее – наш способ достижения успеха и реализации миссии компании.</p>
+      <p class="s1__text" animation="show-up">Командный дух<br>Успех любого предприятия - это люди, которые каждый день вкладывают свои средства, силы, время в реализацию миссии компании. Именно поэтому для нас важно строить настоящую команду профессионалов, объединенных общей идеей, желающих развиваться и получающих удовольствие не только от победы, но и от самого процесса игры. </p>
+      <p class="s1__text" animation="show-up">Движение вперед<br>«Сегодня – это результат наших вчерашних действий». Мы знаем, что завтра будем впереди, потому что уже сегодня делаем все возможное, чтобы стать лучше, результативнее, быстрее и эффективнее!</p>
     </div>
   </div>
   <!-- end s9 -->
+  <footer id="contact">
+    <div class="content-handler content-handler--flex">
+      <span class="footer__item">Украина, г. Киев, ул. Миропольская, 31</span>
+      <a class="footer__item" href="tel:+380633222233">+38(063) 322 22 33</a>
+      <a class="footer__item" href="mailto:office@volkfix.com.ua">office@volkfix.com.ua</a>
+      <span class="footer__item">Copyright © Volkfix - 2020</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/animation.js"></script>
 </body>
 </html>

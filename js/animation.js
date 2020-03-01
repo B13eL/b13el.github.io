@@ -1,7 +1,8 @@
 let showUp = document.querySelectorAll('[animation="show-up"]'),
     showLeft = document.querySelectorAll('[animation="show-left"]'),
     scaleDown = document.querySelectorAll('[animation="scale-down"]'),
-    scale = document.querySelectorAll('[animation="scale"]');
+    scale = document.querySelectorAll('[animation="scale"]'),
+    opacity = document.querySelectorAll('[animation="opacity"]');
 
 function animateElementsCycle () {
   for (let i = 0; i < showUp.length; ++i) {
@@ -26,6 +27,12 @@ function animateElementsCycle () {
     if (scaleDown[i].getBoundingClientRect().top < 600 &&
     !scaleDown[i].classList.contains('animation-scale-down')) {
       scaleDown[i].classList.add('animation-scale-down');
+    }
+  }
+  for (let i = 0; i < opacity.length; ++i) {
+    if (opacity[i].getBoundingClientRect().top < 600 &&
+    !opacity[i].classList.contains('animation-opacity')) {
+      opacity[i].classList.add('animation-opacity');
     }
   }
 }

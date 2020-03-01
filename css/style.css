@@ -77,9 +77,8 @@ button {
   white-space: nowrap;
 }
 
-.text-link {
+.text-gold {
   color: var(--gold-text);
-  font-weight: bold;
 }
 
 .main-title {
@@ -99,7 +98,7 @@ button {
 
 /* start menu */
 .menu {
-  background: #0A0D0F;
+  background: linear-gradient(45deg, #383810 0%, #040400 59%, #040400 100%);
 }
 
 .menu-box {
@@ -129,8 +128,37 @@ button {
   transition: color .5s;
 }
 
+.switch-btn {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  transition: .5s;
+}
+
 .menu__item:hover {
   color: var(--gold-text);
+}
+
+.switch-btn__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .5s;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(.5);
+}
+
+.switch-btn__icon--show {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.switch-btn__icon-close {
+  left: 4px;
 }
 /* end menu */
 
@@ -178,7 +206,8 @@ button {
 
 .s2__img {
   display: block;
-  width: 33%;
+  width: 100%;
+  max-width: 790px;
   transform: translateY(70px);
 }
 
@@ -323,3 +352,21 @@ button {
   margin-bottom: 10px;
 }
 /* end section 9 */
+footer{
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.footer__item {
+  color: var(--gold-text);
+  font-size: 14px;
+}
+
+@media(max-width: 940px) {
+  .switch-btn {
+    display: block;
+  }
+  .menu__box {
+    display: none;
+  }
+}
