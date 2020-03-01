@@ -476,6 +476,24 @@ footer{
   .s9__title {
     font-size: 25px;
   }
+
+  .s5__img {
+    width: 60%;
+  }
+  .s2__img {
+    width: 70%;
+  }
+  .s3__img,
+  .s4__img {
+    width: 38%;
+  }
+
+  .s4__img {
+    transform: none;;
+  }
+  .s6__img {
+    width: 90%;
+  }
 }
 
 @media(max-width: 600px) {
@@ -485,7 +503,7 @@ footer{
 
   .s1__title,
   .main-title {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .s2__title {
