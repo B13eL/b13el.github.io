@@ -1,0 +1,54 @@
+*[animation="show-up"]{
+  opacity: 0;
+  transform: translateY(30px) !important;
+  transition: opacity 1.8s, transform 1.2s;
+}
+.animation-show-top{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+*[animation="show-left"]{
+  opacity: 0;
+  transform: translateX(-30px) !important;
+  transition: opacity 1.8s, transform 1.2s;
+}
+.animation-show-left{
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+*[animation="scale"]{
+  opacity: 0;
+  transform: scale(.9) !important;
+  transition: opacity 1.4s, transform 1.8s;
+}
+.animation-scale{
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+*[animation="scale-down"]{
+  opacity: 0;
+  transform: scale(.9) translateY(-60px) !important;
+  transition: opacity 1.4s, transform 1.4s;
+}
+
+.animation-scale-down{
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+/* start delay */
+*[animation-delay="low"] {
+  transition-delay: .5s;
+}
+
+*[animation-delay="medium"] {
+  transition-delay: 1s;
+}
+
+*[animation-delay="high"] {
+  transition-delay: 1.5s;
+}
+/* ---- end delay */
