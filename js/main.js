@@ -32,30 +32,41 @@ anchors.forEach(function (item) {
   });
 });
 
-let mobBtnMenu = document.querySelector('.switch-btn'),
+const mobBtnMenu = document.querySelector('.switch-btn'),
     switchBtnIconOpen = document.querySelector('.switch-btn__icon-open'),
-    switchBtnIconClose = document.querySelector('.switch-btn__icon-close');
+    switchBtnIconClose = document.querySelector('.switch-btn__icon-close'),
+    mobMenuItems = document.querySelectorAll('.mob-menu__item');
 
 mobBtnMenu.addEventListener('click', function () {
   switchBtnIconOpen.classList.toggle('switch-btn__icon--show');
   switchBtnIconClose.classList.toggle('switch-btn__icon--show');
 });
 
-let mobSubMenuBtn = document.querySelector('.menu-box__mob-btn'),
-    mobSubMenu = document.querySelector('.mob-menu');
+const mobMenu = document.querySelector('.mob-menu');
 
-mobSubMenuBtn.addEventListener('click', function () {
-  if (mobSubMenu.classList.contains('mob-menu--show')) {
-    mobSubMenu.classList.remove('mob-menu--show');
+mobBtnMenu.addEventListener('click', function () {
+  if (mobMenu.classList.contains('mob-menu--show')) {
+    mobMenu.classList.remove('mob-menu--show');
   } else {
-    mobSubMenu.classList.add('mob-menu--show');
+    mobMenu.classList.add('mob-menu--show');
   }
 });
 
+function hideMobMenu() {
+  mobMenu.classList.remove('mob-menu--show');
+  switchBtnIconOpen.classList.add('switch-btn__icon--show');
+  switchBtnIconClose.classList.remove('switch-btn__icon--show');
+}
+
+for (let i = 0; i < mobMenuItems.length; ++i) {
+  mobMenuItems[i].addEventListener('click', function () {
+    hideMobMenu();
+  })
+}
+
+
 window.addEventListener('resize', function () {
-  if (window.innerWidth > 1040 && mobSubMenu.classList.contains('mob-menu--show')){
-    mobSubMenu.classList.remove('mob-menu--show');
-    switchBtnIconOpen.classList.add('switch-btn__icon--show');
-    switchBtnIconClose.classList.remove('switch-btn__icon--show');
+  if (window.innerWidth > 940 && mobMenu.classList.contains('mob-menu--show')) {
+    hideMobMenu();
   }
 });
