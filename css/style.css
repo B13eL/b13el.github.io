@@ -3,6 +3,15 @@
   --gold-text: #EED900;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Montserrat-Regular.woff2") format('woff2'),
+      url("../fonts/Montserrat-Regular.woff") format('woff');
+
+}
+
 a,
 html {
   color: #FCFCFC;
@@ -22,6 +31,7 @@ body {
   overflow-x: hidden;
   position: relative;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Montserrat';
   font-display: swap;
   font-size: 15px;
   background: #040400;
@@ -318,6 +328,12 @@ button {
   max-width: 150px;
   transform: translateY(50px);
 }
+.s7__img {
+  width: 100%;
+  display: block;
+  max-width: 150px;
+  transform: translateY(50px);
+}
 /* end section 4 */
 
 /* start section 5 */
@@ -512,7 +528,7 @@ footer{
     width: 38%;
   }
 
-  .s4__img {
+  .s7__img {
     transform: translateX(40px);
   }
 
@@ -555,3 +571,35 @@ footer{
     font-size: 16px;
   }
 }
+
+
+/* start btn-top */
+.cd-top {
+  position: fixed;
+  display: block;
+  height: 45px;
+  width: 45px;
+  background: #585858;
+  bottom: 30px;
+  right: 30px;
+  line-height: 54px;
+  text-align: center;
+  font-size: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  opacity: 0;
+  transition: .6s;
+}
+
+.cd-top:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  background: #decb02;
+  box-shadow: 0 3px 18px 0 #ded576;
+}
+
+.cd-top--show {
+  visibility: visible;
+  opacity: .6;
+}
+/* end btn-top */
