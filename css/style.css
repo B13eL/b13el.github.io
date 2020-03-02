@@ -393,6 +393,7 @@ button {
 .s9__title {
   color: var(--gold-text);
   font-size: 36px;
+  font-weight: normal;
   margin-bottom: 10px;
 }
 /* end section 9 */
