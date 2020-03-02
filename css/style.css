@@ -301,6 +301,7 @@ button {
   width: 32%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 /* end section 3 */
 
@@ -330,6 +331,7 @@ button {
   width: 30%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .box-info-third {
@@ -510,7 +512,10 @@ footer{
     width: 38%;
   }
 
-  .s4__img,
+  .s4__img {
+    transform: translateX(40px);
+  }
+
   .s3__img,
   .s6__img {
     transform: none;;
