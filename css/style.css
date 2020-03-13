@@ -569,6 +569,7 @@ footer{
   }
 
   .s3__img,
+  .s4__img,
   .s6__img,
   .s5__img {
     transform: none;;
@@ -606,6 +607,10 @@ footer{
   .s1__text,
   .box-detail-item {
     font-size: 16px;
+  }
+
+  .s5 {
+    padding: 70px 0;
   }
 }
 
