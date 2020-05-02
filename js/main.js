@@ -43,12 +43,18 @@ mobBtnMenu.addEventListener('click', function () {
 });
 
 const mobMenu = document.querySelector('.mob-menu');
+const menuLogo = document.querySelector('.menu__link-logo');
+const docHtml = document.querySelector('html');
 
 mobBtnMenu.addEventListener('click', function () {
   if (mobMenu.classList.contains('mob-menu--show')) {
     mobMenu.classList.remove('mob-menu--show');
+    menuLogo.classList.remove('menu__link-logo--active');
+    docHtml.classList.remove('no-overflow');
   } else {
     mobMenu.classList.add('mob-menu--show');
+    menuLogo.classList.add('menu__link-logo--active');
+    docHtml.classList.add('no-overflow');
   }
 });
 
@@ -56,6 +62,7 @@ function hideMobMenu() {
   mobMenu.classList.remove('mob-menu--show');
   switchBtnIconOpen.classList.add('switch-btn__icon--show');
   switchBtnIconClose.classList.remove('switch-btn__icon--show');
+  docHtml.classList.remove('no-overflow');
 }
 
 for (let i = 0; i < mobMenuItems.length; ++i) {
@@ -66,7 +73,7 @@ for (let i = 0; i < mobMenuItems.length; ++i) {
 
 
 window.addEventListener('resize', function () {
-  if (window.innerWidth > 940 && mobMenu.classList.contains('mob-menu--show')) {
+  if (window.innerWidth > 710 && mobMenu.classList.contains('mob-menu--show')) {
     hideMobMenu();
   }
 });
