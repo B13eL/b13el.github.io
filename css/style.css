@@ -492,7 +492,7 @@ button {
 }
 
 footer {
-  background: linear-gradient(to left, var(--violet) 87%, var(--yellow) 87%);;
+  background: linear-gradient(to left, var(--violet) 78%, var(--yellow) 78%);
 }
 
 .footer-flex {
@@ -538,6 +538,12 @@ footer {
 .footer__icon--location {
   margin-left: 4px;
   margin-right: 7px;
+}
+
+@media(max-width: 1300px) {
+  footer {
+    background: linear-gradient(to left, var(--violet) 82%, var(--yellow) 82%);
+  }
 }
 
 @media(max-width: 1050px) {
