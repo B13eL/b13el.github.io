@@ -63,6 +63,7 @@ function hideMobMenu() {
   switchBtnIconOpen.classList.add('switch-btn__icon--show');
   switchBtnIconClose.classList.remove('switch-btn__icon--show');
   docHtml.classList.remove('no-overflow');
+  menuLogo.classList.remove('menu__link-logo--active');
 }
 
 for (let i = 0; i < mobMenuItems.length; ++i) {
