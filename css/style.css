@@ -468,6 +468,10 @@ button {
   margin-bottom: 45px;
 }
 
+.s6__line .s1__text{
+  margin-top: 11px;
+}
+
 .text-violet {
   color: var(--violet-text);
 }
