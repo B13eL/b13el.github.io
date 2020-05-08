@@ -650,6 +650,14 @@ footer {
 @media(max-width: 540px) {
   .s2__img {
     max-width: 150px;
+    margin-left: 18px;
+  }
+
+  .s4__img-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .s1 {
@@ -705,6 +713,7 @@ footer {
 
   .s4__img {
     width: 130px;
+    margin-left: 15px;
   }
 
   .s4__img-part {
